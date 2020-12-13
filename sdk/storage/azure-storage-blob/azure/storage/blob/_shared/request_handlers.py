@@ -66,7 +66,8 @@ def get_length(data):
             pass
         else:
             try:
-                return fstat(fileno).st_size
+                length = fstat(fileno).st_size
+                return length if length else None  # Streaming stdout has 0 filesize. Returning 0 here does not work
             except OSError:
                 # Not a valid fileno, may be possible requests returned
                 # a socket number?
