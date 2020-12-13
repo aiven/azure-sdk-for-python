@@ -134,7 +134,6 @@ class _ChunkUploader(object):  # pylint: disable=too-many-instance-attributes
         self.parallel = parallel
 
         # Stream management
-        self.stream_start = stream.tell() if parallel else None
         self.stream_lock = Lock() if parallel else None
 
         # Progress feedback
@@ -159,6 +158,8 @@ class _ChunkUploader(object):  # pylint: disable=too-many-instance-attributes
             while True:
                 if self.total_size:
                     read_size = min(self.chunk_size - len(data), self.total_size - (index + len(data)))
+                elif data:
+                    read_size = self.chunk_size - len(data)
                 temp = self.stream.read(read_size)
                 if not isinstance(temp, six.binary_type):
                     raise TypeError("Blob data should be of type bytes.")
