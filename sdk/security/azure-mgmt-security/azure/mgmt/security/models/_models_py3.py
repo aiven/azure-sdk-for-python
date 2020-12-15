@@ -503,7 +503,6 @@ class ActiveConnectionsNotInAllowedRange(TimeWindowCustomAlertRule):
     _validation = {
         'display_name': {'readonly': True},
         'description': {'readonly': True},
-        'is_enabled': {'required': True},
         'rule_type': {'required': True},
         'display_name': {'readonly': True},
         'description': {'readonly': True},
@@ -521,7 +520,6 @@ class ActiveConnectionsNotInAllowedRange(TimeWindowCustomAlertRule):
         'rule_type': {'key': 'ruleType', 'type': 'str'},
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
-        'is_enabled': {'key': 'isEnabled', 'type': 'bool'},
         'rule_type': {'key': 'ruleType', 'type': 'str'},
         'min_threshold': {'key': 'minThreshold', 'type': 'int'},
         'max_threshold': {'key': 'maxThreshold', 'type': 'int'},
@@ -532,14 +530,12 @@ class ActiveConnectionsNotInAllowedRange(TimeWindowCustomAlertRule):
         self,
         *,
         is_enabled: bool,
-        is_enabled: bool,
         min_threshold: int,
         max_threshold: int,
         time_window_size: datetime.timedelta,
         **kwargs
     ):
-        super(ActiveConnectionsNotInAllowedRange, self).__init__(is_enabled=is_enabled, is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
-        self.rule_type = 'ActiveConnectionsNotInAllowedRange'  # type: str
+        super(ActiveConnectionsNotInAllowedRange, self).__init__(is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
         self.rule_type = 'ActiveConnectionsNotInAllowedRange'  # type: str
 
 
@@ -1409,8 +1405,6 @@ class AmqpC2DMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
     :vartype display_name: str
     :ivar description: The description of the custom alert.
     :vartype description: str
-    :param is_enabled: Required. Status of the custom alert.
-    :type is_enabled: bool
     :param rule_type: Required. The type of the custom alert rule.Constant filled by server.
     :type rule_type: str
     :ivar display_name: The display name of the custom alert.
@@ -1432,7 +1426,6 @@ class AmqpC2DMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
     _validation = {
         'display_name': {'readonly': True},
         'description': {'readonly': True},
-        'is_enabled': {'required': True},
         'rule_type': {'required': True},
         'display_name': {'readonly': True},
         'description': {'readonly': True},
@@ -1446,7 +1439,6 @@ class AmqpC2DMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
     _attribute_map = {
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
-        'is_enabled': {'key': 'isEnabled', 'type': 'bool'},
         'rule_type': {'key': 'ruleType', 'type': 'str'},
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
@@ -1461,14 +1453,12 @@ class AmqpC2DMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
         self,
         *,
         is_enabled: bool,
-        is_enabled: bool,
         min_threshold: int,
         max_threshold: int,
         time_window_size: datetime.timedelta,
         **kwargs
     ):
-        super(AmqpC2DMessagesNotInAllowedRange, self).__init__(is_enabled=is_enabled, is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
-        self.rule_type = 'AmqpC2DMessagesNotInAllowedRange'  # type: str
+        super(AmqpC2DMessagesNotInAllowedRange, self).__init__(is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
         self.rule_type = 'AmqpC2DMessagesNotInAllowedRange'  # type: str
 
 
@@ -1491,8 +1481,6 @@ class AmqpC2DRejectedMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
     :vartype display_name: str
     :ivar description: The description of the custom alert.
     :vartype description: str
-    :param is_enabled: Required. Status of the custom alert.
-    :type is_enabled: bool
     :param rule_type: Required. The type of the custom alert rule.Constant filled by server.
     :type rule_type: str
     :param min_threshold: Required. The minimum threshold.
@@ -1506,7 +1494,6 @@ class AmqpC2DRejectedMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
     _validation = {
         'display_name': {'readonly': True},
         'description': {'readonly': True},
-        'is_enabled': {'required': True},
         'rule_type': {'required': True},
         'display_name': {'readonly': True},
         'description': {'readonly': True},
@@ -1520,7 +1507,6 @@ class AmqpC2DRejectedMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
     _attribute_map = {
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
-        'is_enabled': {'key': 'isEnabled', 'type': 'bool'},
         'rule_type': {'key': 'ruleType', 'type': 'str'},
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
@@ -1535,14 +1521,12 @@ class AmqpC2DRejectedMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
         self,
         *,
         is_enabled: bool,
-        is_enabled: bool,
         min_threshold: int,
         max_threshold: int,
         time_window_size: datetime.timedelta,
         **kwargs
     ):
-        super(AmqpC2DRejectedMessagesNotInAllowedRange, self).__init__(is_enabled=is_enabled, is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
-        self.rule_type = 'AmqpC2DRejectedMessagesNotInAllowedRange'  # type: str
+        super(AmqpC2DRejectedMessagesNotInAllowedRange, self).__init__(is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
         self.rule_type = 'AmqpC2DRejectedMessagesNotInAllowedRange'  # type: str
 
 
@@ -1557,8 +1541,6 @@ class AmqpD2CMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
     :vartype display_name: str
     :ivar description: The description of the custom alert.
     :vartype description: str
-    :param is_enabled: Required. Status of the custom alert.
-    :type is_enabled: bool
     :param rule_type: Required. The type of the custom alert rule.Constant filled by server.
     :type rule_type: str
     :ivar display_name: The display name of the custom alert.
@@ -1580,7 +1562,6 @@ class AmqpD2CMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
     _validation = {
         'display_name': {'readonly': True},
         'description': {'readonly': True},
-        'is_enabled': {'required': True},
         'rule_type': {'required': True},
         'display_name': {'readonly': True},
         'description': {'readonly': True},
@@ -1598,7 +1579,6 @@ class AmqpD2CMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
         'rule_type': {'key': 'ruleType', 'type': 'str'},
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
-        'is_enabled': {'key': 'isEnabled', 'type': 'bool'},
         'rule_type': {'key': 'ruleType', 'type': 'str'},
         'min_threshold': {'key': 'minThreshold', 'type': 'int'},
         'max_threshold': {'key': 'maxThreshold', 'type': 'int'},
@@ -1609,14 +1589,12 @@ class AmqpD2CMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
         self,
         *,
         is_enabled: bool,
-        is_enabled: bool,
         min_threshold: int,
         max_threshold: int,
         time_window_size: datetime.timedelta,
         **kwargs
     ):
-        super(AmqpD2CMessagesNotInAllowedRange, self).__init__(is_enabled=is_enabled, is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
-        self.rule_type = 'AmqpD2CMessagesNotInAllowedRange'  # type: str
+        super(AmqpD2CMessagesNotInAllowedRange, self).__init__(is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
         self.rule_type = 'AmqpD2CMessagesNotInAllowedRange'  # type: str
 
 
@@ -3182,8 +3160,6 @@ class ConnectionToIpNotAllowed(AllowlistCustomAlertRule):
     :vartype display_name: str
     :ivar description: The description of the custom alert.
     :vartype description: str
-    :param is_enabled: Required. Status of the custom alert.
-    :type is_enabled: bool
     :param rule_type: Required. The type of the custom alert rule.Constant filled by server.
     :type rule_type: str
     :ivar display_name: The display name of the custom alert.
@@ -3205,7 +3181,6 @@ class ConnectionToIpNotAllowed(AllowlistCustomAlertRule):
     _validation = {
         'display_name': {'readonly': True},
         'description': {'readonly': True},
-        'is_enabled': {'required': True},
         'rule_type': {'required': True},
         'display_name': {'readonly': True},
         'description': {'readonly': True},
@@ -3218,7 +3193,6 @@ class ConnectionToIpNotAllowed(AllowlistCustomAlertRule):
     _attribute_map = {
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
-        'is_enabled': {'key': 'isEnabled', 'type': 'bool'},
         'rule_type': {'key': 'ruleType', 'type': 'str'},
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
@@ -3232,12 +3206,10 @@ class ConnectionToIpNotAllowed(AllowlistCustomAlertRule):
         self,
         *,
         is_enabled: bool,
-        is_enabled: bool,
         allowlist_values: List[str],
         **kwargs
     ):
-        super(ConnectionToIpNotAllowed, self).__init__(is_enabled=is_enabled, is_enabled=is_enabled, allowlist_values=allowlist_values, **kwargs)
-        self.rule_type = 'ConnectionToIpNotAllowed'  # type: str
+        super(ConnectionToIpNotAllowed, self).__init__(is_enabled=is_enabled, allowlist_values=allowlist_values, **kwargs)
         self.rule_type = 'ConnectionToIpNotAllowed'  # type: str
 
 
@@ -3890,8 +3862,6 @@ class DirectMethodInvokesNotInAllowedRange(TimeWindowCustomAlertRule):
     :vartype display_name: str
     :ivar description: The description of the custom alert.
     :vartype description: str
-    :param is_enabled: Required. Status of the custom alert.
-    :type is_enabled: bool
     :param rule_type: Required. The type of the custom alert rule.Constant filled by server.
     :type rule_type: str
     :param min_threshold: Required. The minimum threshold.
@@ -3905,7 +3875,6 @@ class DirectMethodInvokesNotInAllowedRange(TimeWindowCustomAlertRule):
     _validation = {
         'display_name': {'readonly': True},
         'description': {'readonly': True},
-        'is_enabled': {'required': True},
         'rule_type': {'required': True},
         'display_name': {'readonly': True},
         'description': {'readonly': True},
@@ -3919,7 +3888,6 @@ class DirectMethodInvokesNotInAllowedRange(TimeWindowCustomAlertRule):
     _attribute_map = {
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
-        'is_enabled': {'key': 'isEnabled', 'type': 'bool'},
         'rule_type': {'key': 'ruleType', 'type': 'str'},
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
@@ -3934,14 +3902,12 @@ class DirectMethodInvokesNotInAllowedRange(TimeWindowCustomAlertRule):
         self,
         *,
         is_enabled: bool,
-        is_enabled: bool,
         min_threshold: int,
         max_threshold: int,
         time_window_size: datetime.timedelta,
         **kwargs
     ):
-        super(DirectMethodInvokesNotInAllowedRange, self).__init__(is_enabled=is_enabled, is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
-        self.rule_type = 'DirectMethodInvokesNotInAllowedRange'  # type: str
+        super(DirectMethodInvokesNotInAllowedRange, self).__init__(is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
         self.rule_type = 'DirectMethodInvokesNotInAllowedRange'  # type: str
 
 
@@ -4124,8 +4090,6 @@ class FailedLocalLoginsNotInAllowedRange(TimeWindowCustomAlertRule):
     :vartype display_name: str
     :ivar description: The description of the custom alert.
     :vartype description: str
-    :param is_enabled: Required. Status of the custom alert.
-    :type is_enabled: bool
     :param rule_type: Required. The type of the custom alert rule.Constant filled by server.
     :type rule_type: str
     :param min_threshold: Required. The minimum threshold.
@@ -4139,7 +4103,6 @@ class FailedLocalLoginsNotInAllowedRange(TimeWindowCustomAlertRule):
     _validation = {
         'display_name': {'readonly': True},
         'description': {'readonly': True},
-        'is_enabled': {'required': True},
         'rule_type': {'required': True},
         'display_name': {'readonly': True},
         'description': {'readonly': True},
@@ -4153,7 +4116,6 @@ class FailedLocalLoginsNotInAllowedRange(TimeWindowCustomAlertRule):
     _attribute_map = {
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
-        'is_enabled': {'key': 'isEnabled', 'type': 'bool'},
         'rule_type': {'key': 'ruleType', 'type': 'str'},
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
@@ -4168,13 +4130,12 @@ class FailedLocalLoginsNotInAllowedRange(TimeWindowCustomAlertRule):
         self,
         *,
         is_enabled: bool,
-        is_enabled: bool,
         min_threshold: int,
         max_threshold: int,
         time_window_size: datetime.timedelta,
         **kwargs
     ):
-        super(FailedLocalLoginsNotInAllowedRange, self).__init__(is_enabled=is_enabled, is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
+        super(FailedLocalLoginsNotInAllowedRange, self).__init__(is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
         self.rule_type = 'FailedLocalLoginsNotInAllowedRange'  # type: str
         self.rule_type = 'FailedLocalLoginsNotInAllowedRange'  # type: str
 
@@ -4190,8 +4151,6 @@ class FileUploadsNotInAllowedRange(TimeWindowCustomAlertRule):
     :vartype display_name: str
     :ivar description: The description of the custom alert.
     :vartype description: str
-    :param is_enabled: Required. Status of the custom alert.
-    :type is_enabled: bool
     :param rule_type: Required. The type of the custom alert rule.Constant filled by server.
     :type rule_type: str
     :ivar display_name: The display name of the custom alert.
@@ -4213,7 +4172,6 @@ class FileUploadsNotInAllowedRange(TimeWindowCustomAlertRule):
     _validation = {
         'display_name': {'readonly': True},
         'description': {'readonly': True},
-        'is_enabled': {'required': True},
         'rule_type': {'required': True},
         'display_name': {'readonly': True},
         'description': {'readonly': True},
@@ -4227,7 +4185,6 @@ class FileUploadsNotInAllowedRange(TimeWindowCustomAlertRule):
     _attribute_map = {
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
-        'is_enabled': {'key': 'isEnabled', 'type': 'bool'},
         'rule_type': {'key': 'ruleType', 'type': 'str'},
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
@@ -4242,14 +4199,12 @@ class FileUploadsNotInAllowedRange(TimeWindowCustomAlertRule):
         self,
         *,
         is_enabled: bool,
-        is_enabled: bool,
         min_threshold: int,
         max_threshold: int,
         time_window_size: datetime.timedelta,
         **kwargs
     ):
-        super(FileUploadsNotInAllowedRange, self).__init__(is_enabled=is_enabled, is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
-        self.rule_type = 'FileUploadsNotInAllowedRange'  # type: str
+        super(FileUploadsNotInAllowedRange, self).__init__(is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
         self.rule_type = 'FileUploadsNotInAllowedRange'  # type: str
 
 
@@ -4427,8 +4382,6 @@ class HttpC2DMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
     :vartype display_name: str
     :ivar description: The description of the custom alert.
     :vartype description: str
-    :param is_enabled: Required. Status of the custom alert.
-    :type is_enabled: bool
     :param rule_type: Required. The type of the custom alert rule.Constant filled by server.
     :type rule_type: str
     :ivar display_name: The display name of the custom alert.
@@ -4450,7 +4403,6 @@ class HttpC2DMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
     _validation = {
         'display_name': {'readonly': True},
         'description': {'readonly': True},
-        'is_enabled': {'required': True},
         'rule_type': {'required': True},
         'display_name': {'readonly': True},
         'description': {'readonly': True},
@@ -4464,7 +4416,6 @@ class HttpC2DMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
     _attribute_map = {
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
-        'is_enabled': {'key': 'isEnabled', 'type': 'bool'},
         'rule_type': {'key': 'ruleType', 'type': 'str'},
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
@@ -4479,14 +4430,12 @@ class HttpC2DMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
         self,
         *,
         is_enabled: bool,
-        is_enabled: bool,
         min_threshold: int,
         max_threshold: int,
         time_window_size: datetime.timedelta,
         **kwargs
     ):
-        super(HttpC2DMessagesNotInAllowedRange, self).__init__(is_enabled=is_enabled, is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
-        self.rule_type = 'HttpC2DMessagesNotInAllowedRange'  # type: str
+        super(HttpC2DMessagesNotInAllowedRange, self).__init__(is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
         self.rule_type = 'HttpC2DMessagesNotInAllowedRange'  # type: str
 
 
@@ -4501,8 +4450,6 @@ class HttpC2DRejectedMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
     :vartype display_name: str
     :ivar description: The description of the custom alert.
     :vartype description: str
-    :param is_enabled: Required. Status of the custom alert.
-    :type is_enabled: bool
     :param rule_type: Required. The type of the custom alert rule.Constant filled by server.
     :type rule_type: str
     :ivar display_name: The display name of the custom alert.
@@ -4524,7 +4471,6 @@ class HttpC2DRejectedMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
     _validation = {
         'display_name': {'readonly': True},
         'description': {'readonly': True},
-        'is_enabled': {'required': True},
         'rule_type': {'required': True},
         'display_name': {'readonly': True},
         'description': {'readonly': True},
@@ -4538,7 +4484,6 @@ class HttpC2DRejectedMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
     _attribute_map = {
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
-        'is_enabled': {'key': 'isEnabled', 'type': 'bool'},
         'rule_type': {'key': 'ruleType', 'type': 'str'},
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
@@ -4553,13 +4498,12 @@ class HttpC2DRejectedMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
         self,
         *,
         is_enabled: bool,
-        is_enabled: bool,
         min_threshold: int,
         max_threshold: int,
         time_window_size: datetime.timedelta,
         **kwargs
     ):
-        super(HttpC2DRejectedMessagesNotInAllowedRange, self).__init__(is_enabled=is_enabled, is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
+        super(HttpC2DRejectedMessagesNotInAllowedRange, self).__init__(is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
         self.rule_type = 'HttpC2DRejectedMessagesNotInAllowedRange'  # type: str
         self.rule_type = 'HttpC2DRejectedMessagesNotInAllowedRange'  # type: str
 
@@ -4575,8 +4519,6 @@ class HttpD2CMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
     :vartype display_name: str
     :ivar description: The description of the custom alert.
     :vartype description: str
-    :param is_enabled: Required. Status of the custom alert.
-    :type is_enabled: bool
     :param rule_type: Required. The type of the custom alert rule.Constant filled by server.
     :type rule_type: str
     :ivar display_name: The display name of the custom alert.
@@ -4598,7 +4540,6 @@ class HttpD2CMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
     _validation = {
         'display_name': {'readonly': True},
         'description': {'readonly': True},
-        'is_enabled': {'required': True},
         'rule_type': {'required': True},
         'display_name': {'readonly': True},
         'description': {'readonly': True},
@@ -4612,7 +4553,6 @@ class HttpD2CMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
     _attribute_map = {
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
-        'is_enabled': {'key': 'isEnabled', 'type': 'bool'},
         'rule_type': {'key': 'ruleType', 'type': 'str'},
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
@@ -4627,13 +4567,12 @@ class HttpD2CMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
         self,
         *,
         is_enabled: bool,
-        is_enabled: bool,
         min_threshold: int,
         max_threshold: int,
         time_window_size: datetime.timedelta,
         **kwargs
     ):
-        super(HttpD2CMessagesNotInAllowedRange, self).__init__(is_enabled=is_enabled, is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
+        super(HttpD2CMessagesNotInAllowedRange, self).__init__(is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
         self.rule_type = 'HttpD2CMessagesNotInAllowedRange'  # type: str
         self.rule_type = 'HttpD2CMessagesNotInAllowedRange'  # type: str
 
@@ -6652,8 +6591,6 @@ class LocalUserNotAllowed(AllowlistCustomAlertRule):
     :vartype display_name: str
     :ivar description: The description of the custom alert.
     :vartype description: str
-    :param is_enabled: Required. Status of the custom alert.
-    :type is_enabled: bool
     :param rule_type: Required. The type of the custom alert rule.Constant filled by server.
     :type rule_type: str
     :ivar display_name: The display name of the custom alert.
@@ -6675,7 +6612,6 @@ class LocalUserNotAllowed(AllowlistCustomAlertRule):
     _validation = {
         'display_name': {'readonly': True},
         'description': {'readonly': True},
-        'is_enabled': {'required': True},
         'rule_type': {'required': True},
         'display_name': {'readonly': True},
         'description': {'readonly': True},
@@ -6688,7 +6624,6 @@ class LocalUserNotAllowed(AllowlistCustomAlertRule):
     _attribute_map = {
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
-        'is_enabled': {'key': 'isEnabled', 'type': 'bool'},
         'rule_type': {'key': 'ruleType', 'type': 'str'},
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
@@ -6702,11 +6637,10 @@ class LocalUserNotAllowed(AllowlistCustomAlertRule):
         self,
         *,
         is_enabled: bool,
-        is_enabled: bool,
         allowlist_values: List[str],
         **kwargs
     ):
-        super(LocalUserNotAllowed, self).__init__(is_enabled=is_enabled, is_enabled=is_enabled, allowlist_values=allowlist_values, **kwargs)
+        super(LocalUserNotAllowed, self).__init__(is_enabled=is_enabled, allowlist_values=allowlist_values, **kwargs)
         self.rule_type = 'LocalUserNotAllowed'  # type: str
         self.rule_type = 'LocalUserNotAllowed'  # type: str
 
@@ -6816,8 +6750,6 @@ class MqttC2DMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
     :vartype display_name: str
     :ivar description: The description of the custom alert.
     :vartype description: str
-    :param is_enabled: Required. Status of the custom alert.
-    :type is_enabled: bool
     :param rule_type: Required. The type of the custom alert rule.Constant filled by server.
     :type rule_type: str
     :ivar display_name: The display name of the custom alert.
@@ -6839,7 +6771,6 @@ class MqttC2DMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
     _validation = {
         'display_name': {'readonly': True},
         'description': {'readonly': True},
-        'is_enabled': {'required': True},
         'rule_type': {'required': True},
         'display_name': {'readonly': True},
         'description': {'readonly': True},
@@ -6853,7 +6784,6 @@ class MqttC2DMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
     _attribute_map = {
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
-        'is_enabled': {'key': 'isEnabled', 'type': 'bool'},
         'rule_type': {'key': 'ruleType', 'type': 'str'},
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
@@ -6868,14 +6798,12 @@ class MqttC2DMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
         self,
         *,
         is_enabled: bool,
-        is_enabled: bool,
         min_threshold: int,
         max_threshold: int,
         time_window_size: datetime.timedelta,
         **kwargs
     ):
-        super(MqttC2DMessagesNotInAllowedRange, self).__init__(is_enabled=is_enabled, is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
-        self.rule_type = 'MqttC2DMessagesNotInAllowedRange'  # type: str
+        super(MqttC2DMessagesNotInAllowedRange, self).__init__(is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
         self.rule_type = 'MqttC2DMessagesNotInAllowedRange'  # type: str
 
 
@@ -6890,8 +6818,6 @@ class MqttC2DRejectedMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
     :vartype display_name: str
     :ivar description: The description of the custom alert.
     :vartype description: str
-    :param is_enabled: Required. Status of the custom alert.
-    :type is_enabled: bool
     :param rule_type: Required. The type of the custom alert rule.Constant filled by server.
     :type rule_type: str
     :ivar display_name: The display name of the custom alert.
@@ -6913,7 +6839,6 @@ class MqttC2DRejectedMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
     _validation = {
         'display_name': {'readonly': True},
         'description': {'readonly': True},
-        'is_enabled': {'required': True},
         'rule_type': {'required': True},
         'display_name': {'readonly': True},
         'description': {'readonly': True},
@@ -6927,7 +6852,6 @@ class MqttC2DRejectedMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
     _attribute_map = {
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
-        'is_enabled': {'key': 'isEnabled', 'type': 'bool'},
         'rule_type': {'key': 'ruleType', 'type': 'str'},
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
@@ -6942,14 +6866,12 @@ class MqttC2DRejectedMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
         self,
         *,
         is_enabled: bool,
-        is_enabled: bool,
         min_threshold: int,
         max_threshold: int,
         time_window_size: datetime.timedelta,
         **kwargs
     ):
-        super(MqttC2DRejectedMessagesNotInAllowedRange, self).__init__(is_enabled=is_enabled, is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
-        self.rule_type = 'MqttC2DRejectedMessagesNotInAllowedRange'  # type: str
+        super(MqttC2DRejectedMessagesNotInAllowedRange, self).__init__(is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
         self.rule_type = 'MqttC2DRejectedMessagesNotInAllowedRange'  # type: str
 
 
@@ -6964,8 +6886,6 @@ class MqttD2CMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
     :vartype display_name: str
     :ivar description: The description of the custom alert.
     :vartype description: str
-    :param is_enabled: Required. Status of the custom alert.
-    :type is_enabled: bool
     :param rule_type: Required. The type of the custom alert rule.Constant filled by server.
     :type rule_type: str
     :ivar display_name: The display name of the custom alert.
@@ -6987,7 +6907,6 @@ class MqttD2CMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
     _validation = {
         'display_name': {'readonly': True},
         'description': {'readonly': True},
-        'is_enabled': {'required': True},
         'rule_type': {'required': True},
         'display_name': {'readonly': True},
         'description': {'readonly': True},
@@ -7001,7 +6920,6 @@ class MqttD2CMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
     _attribute_map = {
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
-        'is_enabled': {'key': 'isEnabled', 'type': 'bool'},
         'rule_type': {'key': 'ruleType', 'type': 'str'},
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
@@ -7016,14 +6934,12 @@ class MqttD2CMessagesNotInAllowedRange(TimeWindowCustomAlertRule):
         self,
         *,
         is_enabled: bool,
-        is_enabled: bool,
         min_threshold: int,
         max_threshold: int,
         time_window_size: datetime.timedelta,
         **kwargs
     ):
-        super(MqttD2CMessagesNotInAllowedRange, self).__init__(is_enabled=is_enabled, is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
-        self.rule_type = 'MqttD2CMessagesNotInAllowedRange'  # type: str
+        super(MqttD2CMessagesNotInAllowedRange, self).__init__(is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
         self.rule_type = 'MqttD2CMessagesNotInAllowedRange'  # type: str
 
 
@@ -7798,8 +7714,6 @@ class ProcessNotAllowed(AllowlistCustomAlertRule):
     :vartype display_name: str
     :ivar description: The description of the custom alert.
     :vartype description: str
-    :param is_enabled: Required. Status of the custom alert.
-    :type is_enabled: bool
     :param rule_type: Required. The type of the custom alert rule.Constant filled by server.
     :type rule_type: str
     :ivar display_name: The display name of the custom alert.
@@ -7821,7 +7735,6 @@ class ProcessNotAllowed(AllowlistCustomAlertRule):
     _validation = {
         'display_name': {'readonly': True},
         'description': {'readonly': True},
-        'is_enabled': {'required': True},
         'rule_type': {'required': True},
         'display_name': {'readonly': True},
         'description': {'readonly': True},
@@ -7834,7 +7747,6 @@ class ProcessNotAllowed(AllowlistCustomAlertRule):
     _attribute_map = {
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
-        'is_enabled': {'key': 'isEnabled', 'type': 'bool'},
         'rule_type': {'key': 'ruleType', 'type': 'str'},
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
@@ -7848,12 +7760,10 @@ class ProcessNotAllowed(AllowlistCustomAlertRule):
         self,
         *,
         is_enabled: bool,
-        is_enabled: bool,
         allowlist_values: List[str],
         **kwargs
     ):
-        super(ProcessNotAllowed, self).__init__(is_enabled=is_enabled, is_enabled=is_enabled, allowlist_values=allowlist_values, **kwargs)
-        self.rule_type = 'ProcessNotAllowed'  # type: str
+        super(ProcessNotAllowed, self).__init__(is_enabled=is_enabled, allowlist_values=allowlist_values, **kwargs)
         self.rule_type = 'ProcessNotAllowed'  # type: str
 
 
@@ -8002,8 +7912,6 @@ class QueuePurgesNotInAllowedRange(TimeWindowCustomAlertRule):
     :vartype display_name: str
     :ivar description: The description of the custom alert.
     :vartype description: str
-    :param is_enabled: Required. Status of the custom alert.
-    :type is_enabled: bool
     :param rule_type: Required. The type of the custom alert rule.Constant filled by server.
     :type rule_type: str
     :ivar display_name: The display name of the custom alert.
@@ -8025,7 +7933,6 @@ class QueuePurgesNotInAllowedRange(TimeWindowCustomAlertRule):
     _validation = {
         'display_name': {'readonly': True},
         'description': {'readonly': True},
-        'is_enabled': {'required': True},
         'rule_type': {'required': True},
         'display_name': {'readonly': True},
         'description': {'readonly': True},
@@ -8039,7 +7946,6 @@ class QueuePurgesNotInAllowedRange(TimeWindowCustomAlertRule):
     _attribute_map = {
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
-        'is_enabled': {'key': 'isEnabled', 'type': 'bool'},
         'rule_type': {'key': 'ruleType', 'type': 'str'},
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
@@ -8054,13 +7960,12 @@ class QueuePurgesNotInAllowedRange(TimeWindowCustomAlertRule):
         self,
         *,
         is_enabled: bool,
-        is_enabled: bool,
         min_threshold: int,
         max_threshold: int,
         time_window_size: datetime.timedelta,
         **kwargs
     ):
-        super(QueuePurgesNotInAllowedRange, self).__init__(is_enabled=is_enabled, is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
+        super(QueuePurgesNotInAllowedRange, self).__init__(is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
         self.rule_type = 'QueuePurgesNotInAllowedRange'  # type: str
         self.rule_type = 'QueuePurgesNotInAllowedRange'  # type: str
 
@@ -10340,8 +10245,6 @@ class TwinUpdatesNotInAllowedRange(TimeWindowCustomAlertRule):
     :vartype display_name: str
     :ivar description: The description of the custom alert.
     :vartype description: str
-    :param is_enabled: Required. Status of the custom alert.
-    :type is_enabled: bool
     :param rule_type: Required. The type of the custom alert rule.Constant filled by server.
     :type rule_type: str
     :ivar display_name: The display name of the custom alert.
@@ -10363,7 +10266,6 @@ class TwinUpdatesNotInAllowedRange(TimeWindowCustomAlertRule):
     _validation = {
         'display_name': {'readonly': True},
         'description': {'readonly': True},
-        'is_enabled': {'required': True},
         'rule_type': {'required': True},
         'display_name': {'readonly': True},
         'description': {'readonly': True},
@@ -10377,7 +10279,6 @@ class TwinUpdatesNotInAllowedRange(TimeWindowCustomAlertRule):
     _attribute_map = {
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
-        'is_enabled': {'key': 'isEnabled', 'type': 'bool'},
         'rule_type': {'key': 'ruleType', 'type': 'str'},
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
@@ -10392,14 +10293,12 @@ class TwinUpdatesNotInAllowedRange(TimeWindowCustomAlertRule):
         self,
         *,
         is_enabled: bool,
-        is_enabled: bool,
         min_threshold: int,
         max_threshold: int,
         time_window_size: datetime.timedelta,
         **kwargs
     ):
-        super(TwinUpdatesNotInAllowedRange, self).__init__(is_enabled=is_enabled, is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
-        self.rule_type = 'TwinUpdatesNotInAllowedRange'  # type: str
+        super(TwinUpdatesNotInAllowedRange, self).__init__(is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
         self.rule_type = 'TwinUpdatesNotInAllowedRange'  # type: str
 
 
@@ -10414,8 +10313,6 @@ class UnauthorizedOperationsNotInAllowedRange(TimeWindowCustomAlertRule):
     :vartype display_name: str
     :ivar description: The description of the custom alert.
     :vartype description: str
-    :param is_enabled: Required. Status of the custom alert.
-    :type is_enabled: bool
     :param rule_type: Required. The type of the custom alert rule.Constant filled by server.
     :type rule_type: str
     :ivar display_name: The display name of the custom alert.
@@ -10437,7 +10334,6 @@ class UnauthorizedOperationsNotInAllowedRange(TimeWindowCustomAlertRule):
     _validation = {
         'display_name': {'readonly': True},
         'description': {'readonly': True},
-        'is_enabled': {'required': True},
         'rule_type': {'required': True},
         'display_name': {'readonly': True},
         'description': {'readonly': True},
@@ -10451,7 +10347,6 @@ class UnauthorizedOperationsNotInAllowedRange(TimeWindowCustomAlertRule):
     _attribute_map = {
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
-        'is_enabled': {'key': 'isEnabled', 'type': 'bool'},
         'rule_type': {'key': 'ruleType', 'type': 'str'},
         'display_name': {'key': 'displayName', 'type': 'str'},
         'description': {'key': 'description', 'type': 'str'},
@@ -10466,14 +10361,12 @@ class UnauthorizedOperationsNotInAllowedRange(TimeWindowCustomAlertRule):
         self,
         *,
         is_enabled: bool,
-        is_enabled: bool,
         min_threshold: int,
         max_threshold: int,
         time_window_size: datetime.timedelta,
         **kwargs
     ):
-        super(UnauthorizedOperationsNotInAllowedRange, self).__init__(is_enabled=is_enabled, is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
-        self.rule_type = 'UnauthorizedOperationsNotInAllowedRange'  # type: str
+        super(UnauthorizedOperationsNotInAllowedRange, self).__init__(is_enabled=is_enabled, min_threshold=min_threshold, max_threshold=max_threshold, time_window_size=time_window_size, **kwargs)
         self.rule_type = 'UnauthorizedOperationsNotInAllowedRange'  # type: str
 
 
