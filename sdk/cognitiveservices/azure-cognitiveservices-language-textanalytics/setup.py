@@ -79,7 +79,7 @@ setup(
     ]),
     install_requires=[
         'msrest>=0.5.0',
-        'azure-common~=1.1',
+        'azure-common>=1.1',
     ],
     extras_require={
         ":python_version<'3.0'": ['azure-cognitiveservices-language-nspkg'],

@@ -80,7 +80,7 @@ setup(
     packages=find_packages(),
     install_requires=[
         'msrestazure~=0.4.7',
-        'azure-common~=1.1.5',
+        'azure-common>=1.1.5',
     ],
     cmdclass=cmdclass
 )
