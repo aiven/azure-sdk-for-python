@@ -397,7 +397,7 @@ class HttpLoggingPolicy(SansIOHTTPPolicy):
         # then use my instance logger
         logger = request.context.setdefault("logger", options.pop("logger", self.logger))
 
-        if not logger.isEnabledFor(logging.INFO):
+        if not logger.isEnabledFor(logging.WARNING):
             return
 
         try:
@@ -424,7 +424,7 @@ class HttpLoggingPolicy(SansIOHTTPPolicy):
         try:
             logger = response.context["logger"]
 
-            if not logger.isEnabledFor(logging.INFO):
+            if not logger.isEnabledFor(logging.WARNING):
                 return
 
             logger.info("Response status: %r", http_response.status_code)
